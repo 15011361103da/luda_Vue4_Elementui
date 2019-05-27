@@ -4,9 +4,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>element-ui</title>
+    <script>
+      (function (doc, win) {
+        var docEl = doc.documentElement,
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+          recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            if(clientWidth>=750){
+              docEl.style.fontSize = '100px';
+            }else{
+              docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+          };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+      })(document, window);
+
+    </script>
   </head>
-  <body>
+  <body style="margin: 0;padding: 0">
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
 </html>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+</style>
