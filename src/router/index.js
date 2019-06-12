@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import HelloREM from '../components/HelloREM'
 import HelloSwiper from '../components/swiper/HelloSwiper'
 import LazyLoad from '../components/lazyload/LazyLoad'
+import Parent from '../components/passByValue/Parent'
 
 Vue.use(Router)
 
@@ -30,6 +31,13 @@ export default new Router({
       name: 'LazyLoad',
       component: LazyLoad,
       title:'懒加载'
-    }
+    },
+    /*测试子父组件间传值，，以及vueX*/
+    {
+      path: '/Parent',
+      name: 'Parent',
+      component: Parent,
+      title:'组件传值-VueX'
+    },
   ]
 })

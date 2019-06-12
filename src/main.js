@@ -10,6 +10,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import Axios from 'axios'
 import VueLazyload from 'vue-lazyload'
+import store from './store'
 
 Vue.use(VueLazyload)
 Vue.prototype.$axios = Axios
@@ -20,10 +21,12 @@ Vue.use(CarouselItem);
 Vue.use(InputNumber);
 Vue.config.productionTip = false
 
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
