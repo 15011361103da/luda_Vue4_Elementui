@@ -7,6 +7,8 @@
       <div>fu 显示count1：{{count1}}</div>
 
       <button @click="min">减少</button>
+
+      <button @click="arr">数组指定位置</button>
     </div>
 </template>
 
@@ -44,6 +46,11 @@
         //this.$store.commit("increment");
         //这种是使用了actions！！！
         this.$store.dispatch("min");
+      },
+      arr(){
+        var arr = [15,1,5,12,15,21,65,48,51,52];
+        arr.splice(2,1);
+        console.log(arr);
       }
     },
   }

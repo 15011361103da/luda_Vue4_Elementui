@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 /*饿了么ui*/
-import { Button, Select,Carousel, CarouselItem,InputNumber } from 'element-ui'
+import { Button, Select,Carousel, CarouselItem,InputNumber,Progress,slider } from 'element-ui'
 /*swiper滑块、轮播图*/
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
@@ -19,6 +19,8 @@ Vue.use(Button)
 Vue.use(Carousel);
 Vue.use(CarouselItem);
 Vue.use(InputNumber);
+Vue.use(Progress);
+Vue.use(slider);
 Vue.config.productionTip = false
 
 

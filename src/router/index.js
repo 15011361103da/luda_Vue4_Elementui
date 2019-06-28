@@ -5,6 +5,7 @@ import HelloREM from '../components/HelloREM'
 import HelloSwiper from '../components/swiper/HelloSwiper'
 import LazyLoad from '../components/lazyload/LazyLoad'
 import Parent from '../components/passByValue/Parent'
+import ArrayFun from '../components/ArrayFun'
 
 Vue.use(Router)
 
@@ -38,6 +39,12 @@ export default new Router({
       name: 'Parent',
       component: Parent,
       title:'组件传值-VueX'
+    },
+    {
+      path: '/ArrayFun',
+      name: 'ArrayFun',
+      component: ArrayFun,
+      title:'数组方法的测试'
     },
   ]
 })
