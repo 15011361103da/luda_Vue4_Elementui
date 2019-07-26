@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+/*解决ie不支持vuex的问题*/
+import 'babel-polyfill'
 /*饿了么ui*/
 import { Button, Select,Carousel, CarouselItem,InputNumber,Progress,slider } from 'element-ui'
 /*swiper滑块、轮播图*/
@@ -11,6 +13,7 @@ import 'swiper/dist/css/swiper.css'
 import Axios from 'axios'
 import VueLazyload from 'vue-lazyload'
 import store from './store'
+import  './components/a-lianxi/icomoon/style.css'
 
 Vue.use(VueLazyload)
 Vue.prototype.$axios = Axios

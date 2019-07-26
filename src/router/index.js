@@ -13,6 +13,8 @@ import clearfix from '../components/a-lianxi/Clearfix'
 import ie6png from '../components/a-lianxi/Ie6-png'
 import life from '../components/Life'
 import center1 from '../components/a-lianxi/Center1'
+import inlineBlock from '../components/a-lianxi/inline-block'
+import nexttick from '../components/a-lianxi/nextTick'
 
 Vue.use(Router)
 
@@ -94,6 +96,19 @@ export default new Router({
       name: 'center1',
       component: center1,
       title: 'css居中的方法',
+    },
+    {
+      path: '/inlineBlock',
+      name: 'inlineBlock',
+      component: inlineBlock,
+      title: 'css块元素与行内元素',
+    },
+
+    {
+      path: '/nexttick',
+      name: 'nexttick',
+      component: nexttick,
+      title: 'lu',
     },
   ]
 })
