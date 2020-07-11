@@ -13,7 +13,7 @@
       name: "LazyLoad",
       data(){
         return{
-          /*懒加载配置*/
+          /*懒加载配置ok*/
           imgObj: {
             /*要显示图片的地址*/
             src:"http://www.wwtliu.com/sxtstu/blueberrypai/indexImg/banner1.jpg",
