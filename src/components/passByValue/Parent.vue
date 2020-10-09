@@ -29,7 +29,7 @@
     },
     computed:{
       getCount(){
-        //return this.$store.state.count;
+        //return this.$store.state.count;1
         return this.$store.getters.getstate;
       }
     },
