@@ -1,8 +1,8 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ msg }}</h1>
-
-    <el-carousel indicator-position="outside">
+ 
+    <el-carousel height="481px" indicator-position="outside">
       <el-carousel-item v-for="(img,index) in imgs" :key="index">
         <img :src="img" alt="">
       </el-carousel-item>
@@ -10,7 +10,7 @@
 
     <el-button>默认按钮</el-button>
     <el-button type="primary">主要按钮</el-button>
-    <el-button type="success">成功按钮</el-button>
+    <el-button type="success" @click="echartsBtn">成功按钮</el-button>
     <el-button type="info">信息按钮</el-button>
     <el-button type="warning">警告按钮</el-button>
     <el-button type="danger">危险按钮</el-button>
@@ -34,9 +34,9 @@ export default {
       msg: 'Welcome to Your Vue.js App',
       num: 1,
       imgs:[
-        "http://www.wwtliu.com/sxtstu/blueberrypai/indexImg/banner1.jpg",
-        "http://www.wwtliu.com/sxtstu/blueberrypai/indexImg/banner2.jpg",
-        "http://www.wwtliu.com/sxtstu/blueberrypai/indexImg/banner3.jpg",
+        "https://img.adidas.com.cn/resources/2020kvbanner/sep/SUPERSTAR/kv-pc(15).jpg",
+        "https://img.adidas.com.cn/resources/2020kvbanner/sep/SUPERSTAR/kv-pc(14).jpg",
+        "https://img.adidas.com.cn/resources/2020kvbanner/sep/winter/kv-pc2.jpg",
       ]
     }
   },
@@ -46,7 +46,28 @@ export default {
     },
     handleChange(value) {
       console.log(value);
+    },
+    echartsBtn(){
+      console.log("跳转成功")
+      this.$router.push({path:'/echartsFirst'})
     }
+  },
+  mounted() {
+    console.log("luda")
+    function test(){
+      var n = 1
+      console.log(n)
+      function b(){
+        return ++n
+      }
+      return b
+    }
+    
+    let res = test()
+    let num = res()
+    console.log(num)
+    console.log(res())
+
   }
 }
 </script>
@@ -89,6 +110,6 @@ a {
 }
 .el-carousel__item img{
     width: 100%;
-    height: 300px;
-  }
+    
+}
 </style>

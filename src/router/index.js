@@ -15,6 +15,8 @@ import life from '../components/Life'
 import center1 from '../components/a-lianxi/Center1'
 import inlineBlock from '../components/a-lianxi/inline-block'
 import nexttick from '../components/a-lianxi/nextTick'
+import echartsFirst from '../components/echarts_js/echartsFirst'
+import box from '../components/a-lianxi/box'
 
 Vue.use(Router)
 
@@ -109,6 +111,17 @@ export default new Router({
       name: 'nexttick',
       component: nexttick,
       title: 'lu',
+    },
+    {
+      path: '/echartsFirst',
+      name: 'echartsFirst',
+      component: echartsFirst,
+      title: '可视化图表测试',
+    },
+    {
+      path: '/box',
+      name: 'box',
+      component: box
     },
   ]
 })

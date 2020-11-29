@@ -14,6 +14,8 @@ import Axios from 'axios'
 import VueLazyload from 'vue-lazyload'
 import store from './store'
 import  './components/a-lianxi/icomoon/style.css'
+// 引入echarts
+import echarts from 'echarts'
 
 Vue.use(VueLazyload)
 Vue.prototype.$axios = Axios
@@ -25,7 +27,7 @@ Vue.use(InputNumber);
 Vue.use(Progress);
 Vue.use(slider);
 Vue.config.productionTip = false
-
+Vue.prototype.$echarts = echarts
 
 /* eslint-disable no-new */
 new Vue({
